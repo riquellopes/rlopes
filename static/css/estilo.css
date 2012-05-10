@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+*{
+margin:0;
+padding:0;
+}
+
+.mae {
+height: 600px;
+width: 900px;
+font-family: "trebuchet MS";
+text-shadow:1px 1px 1px #FFFFFF;
+color:#7d8086;
+}
+
+.logo {
+height: 280px;
+width: 400px;
+float:left;
+margin-top:190px;
+margin-left:60px;
+}
+
+.links {
+height: 300px;
+width: 350px;
+float:right;
+text-align:left;
+font-size:22px;
+margin-top:160px;
+}
+
+.link {
+height: 30px;
+width: 100%;
+float: left;
+padding-top: 25px;
+}
+
+a:link {
+	color: #18435c;
+	text-decoration:none;
+}
+a:visited {
+	color: #18435C;
+}
+a:hover {
+	color: #18435C;
+	text-decoration:underline;
+}
+a:active {
+	color: #18435C;
+}
+
+.footer {
+height: 100px;
+width: 900px;
+font-family: "trebuchet MS";
+text-shadow:1px 1px 1px #FFFFFF;
+color:#7d8086;
+font-size:14px;
+}
