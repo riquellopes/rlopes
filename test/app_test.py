@@ -13,7 +13,7 @@ class RlopesTest(unittest.TestCase):
 			A página home, deve possuir o titulo rlopes | Home::
 		"""
 		rs = self.app.get("/")
-		assert_true("<title>rlopes | Home</title>" in str(rs.data))
+		assert_true("<title>Henrique Lopes | Home</title>" in str(rs.data))
 		assert_true("Git Hub" in str(rs.data))
 		assert_true("Facebook" in str(rs.data))
 		assert_true("Twitter" in str(rs.data))
