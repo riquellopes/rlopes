@@ -10,10 +10,10 @@ class RlopesTest(unittest.TestCase):
 	
 	def test_a_pagina_index_vai_possuir_o_titulo(self):
 		"""
-			A página home, deve possuir o titulo rlopes | Home::
+			A página home, deve possuir o titulo XXX | Home::
 		"""
 		rs = self.app.get("/")
-		assert_true("<title>Henrique Lopes | Home</title>" in str(rs.data))
+		assert_true("<title>%s | Home</title>" % app.config['TITLE'] in str(rs.data))
 		assert_true("Git Hub" in str(rs.data))
 		assert_true("Facebook" in str(rs.data))
 		assert_true("Twitter" in str(rs.data))
