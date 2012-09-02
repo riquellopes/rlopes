@@ -24,3 +24,6 @@ class RlopesTest(unittest.TestCase):
 		"""
 		rs = self.app.get("/")
 		assert_true(app.config['MAIL_CODE'] in str(rs.data))
+
+class RlopesShopTest(unittest.TestCase):
+	pass

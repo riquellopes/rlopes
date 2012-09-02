@@ -21,11 +21,7 @@ META_DESCRIPTION = (
 
 META_KEYWORDS='Desenvolvedor carioca e apaixonado pelo que faz.'
 META_AUTHOR='Henrique Lopes'
-META_ROBOTS=(
-	'index',
-	'follow',
-)
-
+META_ROBOTS='index, follow'
 META_GOOGLE_SITE_VERIFICATION=environ.get('GOOGLE_SITE_VERIFICATION')
 
 ##############################

@@ -4,9 +4,9 @@
 <head>
 	<title>{{config.TITLE}} | {% block title %}Home{% endblock %}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	{% from 'head.html' import meta, load_ga %}
+	{% from 'head.html' import meta, meta_tuple, load_ga %}
 	{{ meta('google-site-verification', config.META_GOOGLE_SITE_VERIFICATION) }}
-	{{ meta('description', config.META_DESCRIPTION) }}
+	{{ meta_tuple('description', config.META_DESCRIPTION) }}
 	{{ meta('keywords', config.META_KEYWORDS) }}
 	{{ meta('author', config.META_AUTHOR) }}
 	{{ meta('robots', config.META_ROBOTS) }}
@@ -21,7 +21,7 @@
 			}
 		-->
 	</style>
-	{{ load_ga() }}
+	
 </head>
 <body>
 	<div class="mae">
