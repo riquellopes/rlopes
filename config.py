@@ -1,7 +1,7 @@
 # coding: utf-8
 from os import path, environ
 
-TEST=False
+DEBUG = False
 TITLE='Henrique Lopes'
 
 ##############################
@@ -42,6 +42,13 @@ CONSUMER_KEY=environ.get('CONSUMER_KEY')
 GA_USE=True
 GA_SET_COUNT=environ.get('GA_SET_COUNT')
 
+#############################
+# Informactions about DB:	#
+#############################
+MONGOALCHEMY_DATABASE=None
+MONGOALCHEMY_SERVER=None
+MONGOALCHEMY_USER=None
+MONGOALCHEMY_PASSWORD=None
 
 try:
 	from local_settings import *

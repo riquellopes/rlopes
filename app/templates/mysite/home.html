@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block link_css %}<link href="/static/css/estilo.css" rel="stylesheet" type="text/css"/>{% endblock %}
+{% block style %}
+<style type="text/css">
+	<!--
+		body {
+			background-color: #dee5ec;
+			background-image: url(static/img/bg-img.jpg);
+			background-repeat: no-repeat;
+			background-position:center top;
+		}
+	-->
+</style>
+{% endblock %}
+{% block content %}
+<div class="mae">
+	<div class="logo">
+		<img src="/static/img/henrique-lopes.png" alt="{{config.META_AUTHOR}}" width="237" height="169" />
+	</div>
+	<div class="links">
+			{% for link in links %}
+				<div class="link">
+					<img src="/static/img/{{link.src}}" alt="{{link.label}}" width="35" height="32" align="left" style="padding-right:10px;" />
+					<a href="{{link.url}}" target="{{link.target}}">{{link.label}}</a>
+				</div>
+			{% endfor %}
+	</div>
+</div>
+<div class="footer">{{config.META_AUTHOR}} Web Developer - Todos os direitos reservados 2012<br />
+	Email: <a href="javascript:;">{{config.MAIL_CODE|safe}}</a> | Contato: (21)7887-7793
+	<br />
+	<br />
+	<a href="http://www.rafaelcaride.com.br" target="_blank">Design e Frontend Rafael Caride</a>
+</div>
+{% endblock %}

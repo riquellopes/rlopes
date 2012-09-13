@@ -1,0 +1,7 @@
+{% macro meta(name, content) %}
+{% if content %}<meta name="{{name}}" content="{{content}}">{% endif %}
+{% endmacro %}
+
+{% macro meta_tuple(name, contents) %}
+{% if contents %}<meta name="{{name}}" content="{% for content in contents %}{{content}}{% if not loop.last %}, {% endif %}{% endfor %}">{% endif %}
+{% endmacro %}

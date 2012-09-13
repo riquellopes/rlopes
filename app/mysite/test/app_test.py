@@ -1,9 +1,9 @@
 # coding: utf-8
 import unittest
 from nose.tools import assert_true
-from app import app
+from app.mysite.views import app
 
-class RlopesTest(unittest.TestCase):
+class MySiteTest(unittest.TestCase):
 	
 	def setUp(self):
 		self.app = app.test_client()
