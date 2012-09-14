@@ -13,13 +13,6 @@ def home():
 	itens = Iten.query.all()
 	return render_template('shop/shop_list.html', **locals())
 
-@store.route("/<int:iten>")
-def iten(iten):
-	"""
-		Method select iten on shop::
-	"""
-	pass
-
 @store.route("/<int:iten>/buy")
 def buy(iten):
 	"""
@@ -27,8 +20,8 @@ def buy(iten):
 	"""
 	pass
 
-@store.route("/<int:iten>/propost")
-def propost(iten):
+@store.route("/<int:iten>/bid")
+def bid(iten):
 	""" 
 		Method send a propost for my iten on shop::
 	"""

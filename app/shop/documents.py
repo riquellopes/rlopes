@@ -23,9 +23,10 @@ class ItenException(Exception):
 
 class ItenQuery(BaseQuery):
 
+	@property
 	def open_shop(self):
 		"""Method verific if shop should open::"""
-		return False
+		return bool(self.filter({'sell':True}).count())
 
 class Iten(db.Document):
 	"""Container Iten"""
@@ -52,3 +53,50 @@ class Iten(db.Document):
 		except:
 			raise ItenException("Error itens not created.")
 		return True
+
+TRANSACTION_STATUS = (
+	(0, 'Liberado Para Pagamento'),
+	(1, 'Completo'),
+	(2, 'Aguardando Pagamento'),
+	(3, 'Aprovado'),
+	(4, 'Em Análise'),
+	(5, 'Cancelado'),
+)
+
+class PedidoQuery(BaseQuery):
+
+	def paymentProcessing(self, id, status):
+		""" Method as process return payment::"""
+		ped = self.filter({'mongo_id':id}).first()
+		ped.transaction_status = status
+		ped.date_process = now()
+		ped.iten.sold = True
+		ped.iten.save()
+		ped.save()
+		return True
+
+class Pedido(db.Document):
+	"""Container Pedido"""
+	query_class = PedidoQuery
+	email_customer=db.StringField()
+	iten=db.DocumentField(Iten)
+	price_combined=db.FloatField(required=True)
+	price_ship=db.FloatField(required=False, default=0.00)
+	zip_code_customer=db.StringField(required=False)
+	transaction_status=db.IntField(default=0)
+	date_created=db.DateTimeField(default=now())
+	date_process=db.DateTimeField(required=False)
+
+	def __repr__(self):
+		return '<%s, %s>' % (self.email, self.iten.name)
+
+	def save(self, safe=None):
+		try:
+			self.price_combined
+		except AttributeError:
+			self.price_combined = self.iten.price
+		super(Pedido, self).save(safe)
+
+	@property	
+	def transaction_status_str(self):
+		return TRANSACTION_STATUS[self.transaction_status][1]

@@ -1,6 +1,6 @@
 # coding: utf-8
 import unittest
-from nose.tools import assert_true, assert_equals, assert_raises
+from nose.tools import assert_true, assert_equals, assert_raises, assert_false
 from app.shop.documents import Iten, ItenException
 from mock import patch
 
@@ -27,6 +27,16 @@ class ItenTest(BaseTestCase):
 		"""Name shouldn't be empty::"""
 		iten = Iten(name='', descriptions='A melhor placa do mercado', price=50.00, url_imagen='')
 		assert_raises(iten.save)
+
+	def test_method_open_shop_return_true_case_exist_one_or_more_iten_sell(self):
+		"""Method open_shop reuturn True case exist one or more iten then sell::"""
+		iten = Iten(name='', descriptions='A melhor placa do mercado', price=50.00, url_imagen='')
+		iten.save()
+		assert_true(Iten.query.open_shop)
+
+	def test_method_open_shop_return_false(self):
+		"""Method open_shop return False case no exist itens then sell::"""
+		assert_false(Iten.query.open_shop)
 
 class RequestAndSaveInten(BaseTestCase):
 
