@@ -29,7 +29,7 @@ class ItenQuery(BaseQuery):
 		return bool(self.filter({'sell':True}).count())
 
 class Iten(db.Document):
-	"""Container Iten"""
+	"""Container Iten::"""
 	query_class = ItenQuery
 	name=db.StringField()
 	descriptions=db.StringField(required=False)
@@ -76,7 +76,11 @@ class PedidoQuery(BaseQuery):
 		return True
 
 class Pedido(db.Document):
-	"""Container Pedido"""
+	"""
+		Container Pedido::
+
+		- A Pedido is created only to credcard payments.
+	"""
 	query_class = PedidoQuery
 	email_customer=db.StringField()
 	iten=db.DocumentField(Iten)

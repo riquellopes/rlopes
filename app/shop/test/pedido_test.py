@@ -12,7 +12,7 @@ class BaseTestCase(unittest.TestCase):
 		for i in Iten.query.all():
 			i.remove()
 
-class PeditoTest(BaseTestCase):
+class PedidoTest(BaseTestCase):
 
 	def test_pedido_exist(self):
 		"""Pedido exist::"""
