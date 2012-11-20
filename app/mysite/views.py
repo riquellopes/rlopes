@@ -14,6 +14,6 @@ def home():
 		{'label':'Facebook', 'src':'fb.png', 'url':'http://fb.com/riquellopes', 'target':'_blank'},
 		{'label':'Twitter', 'src':'tw.png', 'url':'http://twitter.com/riquellopes', 'target':'_blank'},
 		{'label':'Linkedin', 'src':'lin.png', 'url':'http://br.linkedin.com/in/riquellopes', 'target':'_blank'},
-		{'label':'Shop', 'src':'lin.png', 'url': '/shop' if Iten.query.open_shop else 'javascript:;' , 'target':'_self'},
+		{'label':'Shop', 'src':'lin.png', 'url': '/shop' if Iten.objects.open_shop else 'javascript:;' , 'target':'_self'},
 	)
 	return render_template("mysite/home.html", **locals())

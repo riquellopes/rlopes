@@ -1,10 +1,10 @@
 from flask import Flask, render_template
-from flaskext.mongoalchemy import MongoAlchemy
+from flask_mongoengine import MongoEngine
 
 app = Flask(__name__)
 app.config.from_object('config')
 
-db = MongoAlchemy(app)
+db=MongoEngine(app)
 
 @app.errorhandler(404)
 def not_found(error):

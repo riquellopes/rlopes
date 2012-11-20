@@ -6,11 +6,11 @@ from app.shop.documents import Iten, Pedido, TRANSACTION_STATUS
 class BaseTestCase(unittest.TestCase):
 	
 	def tearDown(self):
-		for p in Pedido.query.all():
-			p.remove()
+		for p in Pedido.objects.all():
+			p.delete()
 
-		for i in Iten.query.all():
-			i.remove()
+		for i in Iten.objects.all():
+			i.delete()
 
 class PedidoTest(BaseTestCase):
 
@@ -25,7 +25,7 @@ class PedidoTest(BaseTestCase):
 		ped = Pedido(email_customer='riquellopes@gmail.com', iten=iten, price_combined=50.00)
 		ped.save()
 		assert_not_equals(ped.price_combined, iten.price)
-		assert_equals(ped.query.count(), 1)
+		assert_equals(Pedido.objects.count(), 1)
 
 	def test_case_price_combined_empty_the_price_combined_should_be_the_price_iten(self):
 		""" Case price empty the price combined should be the price iten::"""
@@ -34,7 +34,7 @@ class PedidoTest(BaseTestCase):
 		ped = Pedido(email_customer='riquellopes@gmail.com', iten=iten)
 		ped.save()
 		assert_equals(ped.price_combined, iten.price)
-		assert_equals(ped.query.count(), 1)
+		assert_equals(Pedido.objects.count(), 1)
 
 	def test_process_return_gateway(self):
 		"""Process return gateway::"""
@@ -42,11 +42,11 @@ class PedidoTest(BaseTestCase):
 		iten.save()
 		ped = Pedido(email_customer='riquellopes@gmail.com', iten=iten)
 		ped.save()
-		id = ped.mongo_id
+		id = ped.id
 
 		del ped, iten
-		assert_true(Pedido.query.paymentProcessing(id, status=3))
-		ped = Pedido.query.filter({'mongo_id':id}).first()
+		assert_true(Pedido.objects.paymentProcessing(id, status=3))
+		ped = Pedido.objects.filter({'id':id}).first()
 		assert_equals(ped.transaction_status, 3)
 		assert_equals(ped.transaction_status_str, TRANSACTION_STATUS[3][1])
 		assert_true(ped.iten.sold)
