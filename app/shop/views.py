@@ -11,7 +11,7 @@ def home():
 	"""
 		Method request riquellopes's shop::
 	"""
-	#itens = Iten.objects.all()
+	itens = Iten.objects.all()
 	return render_template('shop/shop_list.html', **locals())
 
 @store.route("/<int:iten>/buy")

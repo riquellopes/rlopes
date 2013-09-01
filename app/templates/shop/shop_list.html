@@ -14,24 +14,31 @@
 	       </div>
 	 </div>
   
-  {% for itens in iten %}
-    <span id='product-'>
+  {% for iten in itens %}
+    <span id='product-{{iten.id}}'>
     <p class="social">{#<img src="/static/img/icones.jpg" alt="Social" title="Social">#}</p>
     <div class="produto">
-  	    <p class="tag-disponivel"><img src="/static/img/disponivel.png" alt="Disponível" title="Disponível"></p>
-   	    <p class="imagem-produto"><img src="/static/img/imagem.jpg" alt="Produto" title="Produto"></p>
+  	    <p class="tag-disponivel">
+            {% if iten.has_sold %}
+              <img src="/static/img/disponivel.png" alt="Disponível" title="Disponível">
+            {% else %}
+              <img src="/static/img/indisponivel.png" alt="Indisponível" title="Indisponível">
+            {% endif %}
+        </p>
+   	    <p class="imagem-produto">
+          <img src="{{iten.url_imagen|d('/static/img/imagem.jpg', True)}}" alt="Produto" title="Produto"></p>
    	    <p class="links-patrocinados">{#<img src="/static/img/links.jpg" alt="Links" title="Links">#}</p>
-        <h2 class="titulo-produto">Título do Produto</h2>
-        <h3 class="descricao-produto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a nibh neque. Phasellus volutpat cursus laoreet. Donec in nisl eu odio commodo sodales id eu magna. In aliquam facilisis justo dictum gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a nibh neque. Phasellus volutpat cursus laoreet. Donec in nisl eu odio commodo sodales id eu magna. In aliquam facilisis justo dictum gravida.</h3>
+        <h2 class="titulo-produto">{{iten.name}}</h2>
+        <h3 class="descricao-produto">{{iten.descriptions}}</h3>
         <h2 class="preco-produto">
       	   <span class="preco">Preço:</span>
-      	   <span class="valor">R$999,99</span> 
+      	   <span class="valor">R$ {{'%.2f'|format(iten.price)}}</span> 
       	   <span class="botao-comprar">
       		    <a href="javascript:;"><img src="/static/img/botao_proposta.png" alt="Proposta" title="Proposta"></a>
       	   </span>
-      	   <span class="botao-proposta">
+      	   {#<span class="botao-proposta">
       		    <a href="javascript:;"><img src="/static/img/botao_comprar.png" alt="Comprar" title="Comprar"></a>
-      	   </span>
+      	   </span>#}
         </h2>
         <div class="divisao"><img src="/static/img/divisao.png" alt="Divisão" title="Divisão"></div>
     </div>

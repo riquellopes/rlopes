@@ -100,6 +100,11 @@ class Iten(db.Document):
 		except:
 			raise ItenException("Error itens not created.")
 		return True
+    
+	@property
+	def has_sold(self):
+		"""Method verification if iten can be sold::"""
+		return (self.sold and self.sell)
 
 TRANSACTION_STATUS = (
 	(0, 'Liberado Para Pagamento'),
