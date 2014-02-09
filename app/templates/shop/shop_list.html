@@ -5,7 +5,6 @@
 
 {% block content %}
 <div id="pagina">
-
 	 <div id="header">
 	      <div id="logo">
 	      		<a href="/">
@@ -32,13 +31,13 @@
         <h3 class="descricao-produto">{{iten.descriptions}}</h3>
         <h2 class="preco-produto">
       	   <span class="preco">Preço:</span>
-      	   <span class="valor">R$ {{'%.2f'|format(iten.price)}}</span> 
+      	   <span class="valor">R$ {{'%.2f'|format(iten.price)}}</span>
       	   <span class="botao-comprar">
       		    <a href="javascript:;"><img src="/static/img/botao_proposta.png" alt="Proposta" title="Proposta"></a>
       	   </span>
-      	   {#<span class="botao-proposta">
+      	   <span class="botao-proposta">
       		    <a href="javascript:;"><img src="/static/img/botao_comprar.png" alt="Comprar" title="Comprar"></a>
-      	   </span>#}
+      	   </span>
         </h2>
         <div class="divisao"><img src="/static/img/divisao.png" alt="Divisão" title="Divisão"></div>
     </div>
