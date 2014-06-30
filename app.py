@@ -13,6 +13,6 @@ def home():
 		{'label':'Git Hub', 'src':'git.png', 'url':'http://github.com/riquellopes'},
 		{'label':'Facebook', 'src':'fb.png', 'url':'http://fb.com/riquellopes'},
 		{'label':'Twitter', 'src':'tw.png', 'url':'http://twitter.com/riquellopes'},
-		{'label':'Linkedin', 'src':'lin.png', 'url':'javascript:;'},
+		{'label':'Linkedin', 'src':'lin.png', 'url':'https://www.linkedin.com/in/riquellopes'},
 	)
 	return render_template("home.html", **locals())
