@@ -17,4 +17,4 @@ def home():
         {'label': 'Twitter', 'src': 'tw.png', 'url': 'http://twitter.com/riquellopes'},
         {'label': 'Linkedin', 'src': 'lin.png', 'url': 'https://www.linkedin.com/in/riquellopes'},
     )
-    return render_template("home.html", links=links)
+    return render_template("template.html", links=links)
