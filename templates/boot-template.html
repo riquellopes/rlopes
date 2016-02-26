@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <title>Henrique Lopes | {% block title %}Home{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="fBjh-tuMYs3X78qprGCAy6fY38ish64qYL7Y_c74Q4U" />
+	<meta name="description" content="python, php, developer, rlopes, riquellopes, henrique lopes, flask, nosql, javascript">
+	<meta name="keywords" content="Desenvolvedor carioca e apaixonado pelo que faz.">
+	<meta name="author" content="Henrique Lopes">
+	<meta name="language" content="pt-BR" />
+	<meta name="robots" content="index,follow" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Henrique Lopes">
+	<meta property="og:description" content="Desenvolvedor carioca e apaixonado pelo que faz.">
+	<meta property="og:url" content="http://www.henriquelopes.com.br/">
+	<meta property="og:image" content="http://www.henriquelopes.com.br/static/imagens/me.jpg">
+	<meta property='og:site_name' content='Henrique Lopes' />
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-31620221-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Henrique Lopes</h1>
+        </div>
+        <h4>About</h4>
+        <div class="row">
+            <div class="col-sm-10">
+            <p>
+                Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.
+            </p>
+            </div>
+        </div>
+        <h4>Blog posts</h4>
+        <div class="row">
+            <ol>
+                <li><a href="#">Criar um negócio nem sempre é reinventar a roda</a></li>
+                <li><a href="#">Como criar uma api com nodejs e express</a></li>
+                <li><a href="#">A leitura e meus objetivos</a></li>
+                <li><a href="#">Como testar a velocidade da sua internet com Python</a></li>
+                <li><a href="#">Como fazer seu primeiro deploy no Heroku</a></li>
+                <li><a href="#">Simples Flask App</a></li>
+            </ol>
+        </div>
+
+        <h4>Projects</h4>
+        <div class="row">
+            <ol>
+                <li><a href="#">fii</a></li>
+                <li><a href="#">fii-desktop</a></li>
+                <li><a href="#">shazam</a></li>
+                <li><a href="#">bom-negocio-talk</a></li>
+            </ol>
+        </div>
+
+        <h4>Where to find me</h4>
+        <div class="row">
+            <ol>
+                {% for label, link in links %}
+                    <li><a href="{{link}}" target="_blank">{{label}}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
