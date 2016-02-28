@@ -1,0 +1,4 @@
+export NAME='Henrique'
+export DOKKU_APP_RESTORE='1'
+export DOKKU_NGINX_PORT='44775'
+export NO_VHOST='1'
