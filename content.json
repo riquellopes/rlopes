@@ -1,0 +1,118 @@
+{
+  "where_to_find_me":{
+    "content":[
+      {
+        "url":"https:\/\/github.com\/riquellopes",
+        "taget":"_blank",
+        "label":"GitHub"
+      },
+      {
+        "url":"https:\/\/twitter.com\/riquellopes",
+        "taget":"_blank",
+        "label":"Twitter"
+      },
+      {
+        "url":"https:\/\/www.linkedin.com\/in\/riquellopes",
+        "taget":"_blank",
+        "label":"Linkedin"
+      },
+      {
+        "url":"https:\/\/delicious.com\/riquellopes",
+        "taget":"_blank",
+        "label":"Delicious"
+      }
+    ],
+    "title":"Where to find me"
+  },
+  "about":"Software Engineer com 8 anos de experiência, tendo passado por agências web, Indústria de exame laboratorial, Forças armadas, Centro de pesquisa e a agora no Mercado de turismo. Conheci Python em 2009 e de lá pra cá nunca mas larguei. Para te ajudar a ter melhores referências sobre mim, separei alguns links legais. Seja bem vindo.",
+  "books":{
+    "content":[
+      {
+        "url":"https:\/\/pt.wikipedia.org\/wiki\/Pai_Rico,_Pai_Pobre",
+        "taget":"_blank",
+        "label":"Pai Rico Pai Probre"
+      },
+      {
+        "url":"http:\/\/novatec.com.br\/livros\/pythonedjango\/",
+        "taget":"_blank",
+        "label":"Python e Django"
+      },
+      {
+        "url":"http:\/\/novatec.com.br\/livros\/mining\/",
+        "taget":"_blank",
+        "label":"Mineração de Dados da Web Social"
+      },
+      {
+        "url":"https:\/\/en.wikipedia.org\/wiki\/The_Little_Prince",
+        "taget":"_blank",
+        "label":"The little prince"
+      },
+      {
+        "url":"https:\/\/www.bibliaonline.com.br\/",
+        "taget":"_blank",
+        "label":"Holy Bible"
+      },
+      {
+        "url":"https:\/\/pt.wikipedia.org\/wiki\/1808_(livro)",
+        "taget":"_blank",
+        "label":"1808"
+      }
+    ],
+    "title":"Books"
+  },
+  "posts":{
+    "content":[
+      {
+        "url":"http:\/\/blog.henriquelopes.com.br\/criar-um-negocio-nem-sempre-e-reinventar-a-roda.html",
+        "label":"Criar um negócio nem sempre é reinventar a roda"
+      },
+      {
+        "url":"http:\/\/blog.henriquelopes.com.br\/como-criar-uma-api-com-node-js-e-express.html",
+        "label":"Como criar uma api com nodejs e express"
+      },
+      {
+        "url":"http:\/\/blog.henriquelopes.com.br\/a-leitura-e-meus-objetivos.html",
+        "label":"A leitura e meus objetivos"
+      },
+      {
+        "url":"http:\/\/blog.henriquelopes.com.br\/como-testar-a-velocidade-da-sua-internet-com-python.html",
+        "label":"Como testar a velocidade da sua internet com Python"
+      },
+      {
+        "url":"http:\/\/blog.henriquelopes.com.br\/como-fazer-seu-primeiro-deploy-no-heroku.html",
+        "label":"Como fazer seu primeiro deploy no Heroku"
+      }
+    ],
+    "title":"Blog posts"
+  },
+  "projects":{
+    "content":[
+      {
+        "url":"https:\/\/github.com\/riquellopes\/fii",
+        "taget":"_blank",
+        "label":"Fii"
+      },
+      {
+        "url":"https:\/\/github.com\/riquellopes\/fii-desktop",
+        "taget":"_blank",
+        "label":"Fii Desktop"
+      },
+      {
+        "url":"https:\/\/github.com\/riquellopes\/shazam",
+        "taget":"_blank",
+        "label":"Shazam"
+      },
+      {
+        "url":"https:\/\/github.com\/riquellopes\/bom-negocio-talk",
+        "taget":"_blank",
+        "label":"BomNegocioTalk"
+      },
+      {
+        "url":"https:\/\/github.com\/riquellopes\/pelican-adsense",
+        "taget":"_blank",
+        "label":"PelicanAdsense"
+      }
+    ],
+    "title":"Projects"
+  }
+}

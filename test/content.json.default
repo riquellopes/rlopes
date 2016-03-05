@@ -1,0 +1,97 @@
+{
+  "about": "Software Engineer com 8 anos de experiência, tendo passado por agências web, Indústria de exame laboratorial, Forças armadas, Centro de pesquisa e a agora no Mercado de turismo. Conheci Python em 2009 e de lá pra cá nunca mas larguei. Para te ajudar a ter melhores referências sobre mim, separei alguns links legais. Seja bem vindo.",
+  "posts": {
+    "title": "Blog posts",
+    "content": null
+  },
+  "projects": {
+    "title": "Projects",
+    "content": [
+      {
+        "label": "Fii",
+        "url": "https://github.com/riquellopes/fii",
+        "taget": "_blank"
+      },
+      {
+        "label": "Fii Desktop",
+        "url": "https://github.com/riquellopes/fii-desktop",
+        "taget": "_blank"
+      },
+      {
+        "label": "Shazam",
+        "url": "https://github.com/riquellopes/shazam",
+        "taget": "_blank"
+      },
+      {
+        "label": "BomNegocioTalk",
+        "url": "https://github.com/riquellopes/bom-negocio-talk",
+        "taget": "_blank"
+      },
+      {
+        "label": "PelicanAdsense",
+        "url": "https://github.com/riquellopes/pelican-adsense",
+        "taget": "_blank"
+      }
+    ]
+  },
+  "books": {
+    "title": "Books",
+    "content": [
+      {
+        "label": "Pai Rico Pai Probre",
+        "url": "https://pt.wikipedia.org/wiki/Pai_Rico,_Pai_Pobre",
+        "taget": "_blank"
+      },
+      {
+        "label": "Python e Django",
+        "url": "http://novatec.com.br/livros/pythonedjango/",
+        "taget": "_blank"
+      },
+      {
+        "label": "Mineração de Dados da Web Social",
+        "url": "http://novatec.com.br/livros/mining/",
+        "taget": "_blank"
+      },
+      {
+        "label": "The little prince",
+        "url": "https://en.wikipedia.org/wiki/The_Little_Prince",
+        "taget": "_blank"
+      },
+      {
+        "label": "Holy Bible",
+        "url": "https://www.bibliaonline.com.br/",
+        "taget": "_blank"
+      },
+      {
+        "label": "1808",
+        "url": "https://pt.wikipedia.org/wiki/1808_(livro)",
+        "taget": "_blank"
+      }
+    ]
+  },
+  "where_to_find_me": {
+    "title": "Where to find me",
+    "content": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/riquellopes",
+        "taget": "_blank"
+      },
+      {
+        "label": "Twitter",
+        "url": "https://twitter.com/riquellopes",
+        "taget": "_blank"
+      },
+      {
+        "label": "Linkedin",
+        "url": "https://www.linkedin.com/in/riquellopes",
+        "taget": "_blank"
+      },
+      {
+        "label": "Delicious",
+        "url": "https://delicious.com/riquellopes",
+        "taget": "_blank"
+      }
+    ]
+  }
+}

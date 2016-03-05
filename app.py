@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask_frozen import Freezer
 from flask.ext.cache import Cache
+from gcontent import get_content
 
 app = Flask(__name__)
 app.config.from_object("config")
@@ -14,10 +15,4 @@ def home():
     """
         Get first page.
     """
-    links = [
-        ("GitHub", "http://github.com/riquellopes"),
-        ("Twitter", "http://twitter.com/riquellopes"),
-        ("Linkedin", "https://www.linkedin.com/in/riquellopes"),
-        ("Delicious", "https://delicious.com/riquellopes"),
-    ]
-    return render_template("boot-template.html", links=links)
+    return render_template("boot-template.html", data=get_content())

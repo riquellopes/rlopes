@@ -54,45 +54,38 @@
                 </p>
             </div>
         </div>
-        <h4>Blog posts</h4>
+        <h4>{{data.posts.title}}</h4>
         <div class="row">
             <ol>
-                <li><a href="http://blog.henriquelopes.com.br/criar-um-negocio-nem-sempre-e-reinventar-a-roda.html" target="_blank">Criar um negócio nem sempre é reinventar a roda</a></li>
-                <li><a href="http://blog.henriquelopes.com.br/como-criar-uma-api-com-node-js-e-express.html" target="_blank">Como criar uma api com nodejs e express</a></li>
-                <li><a href="http://blog.henriquelopes.com.br/a-leitura-e-meus-objetivos.html" target="_blank">A leitura e meus objetivos</a></li>
-                <li><a href="http://blog.henriquelopes.com.br/como-testar-a-velocidade-da-sua-internet-com-python.html" target="_blank">Como testar a velocidade da sua internet com Python</a></li>
-                <li><a href="http://blog.henriquelopes.com.br/como-fazer-seu-primeiro-deploy-no-heroku.html" target="_blank">Como fazer seu primeiro deploy no Heroku</a></li>
-                <li><a href="http://blog.henriquelopes.com.br/simples-flask-app.html" target="_blank">Simples Flask App</a></li>
+                {% for post in data.posts.content %}
+                    <li><a href="{{post.url}}" target="_blank">{{post.label}}</a></li>
+                {% endfor %}
             </ol>
         </div>
 
-        <h4>Projects</h4>
+        <h4>{{data.projects.title}}</h4>
         <div class="row">
             <ol>
-                <li><a href="https://github.com/riquellopes/fii" target="_blank">Fii</a></li>
-                <li><a href="https://github.com/riquellopes/fii-desktop" target="_blank">Fii Desktop</a></li>
-                <li><a href="https://github.com/riquellopes/shazam" target="_blank">Shazam</a></li>
-                <li><a href="https://github.com/riquellopes/bom-negocio-talk" target="_blank">BomNegocioTalk</a></li>
+                {% for post in data.projects.content %}
+                    <li><a href="{{post.url}}" target="_blank">{{post.label}}</a></li>
+                {% endfor %}
             </ol>
         </div>
 
-        <h4>Books</h4>
+        <h4>{{data.books.title}}</h4>
         <div class="row">
             <ol>
-                <li><a href="https://pt.wikipedia.org/wiki/Pai_Rico,_Pai_Pobre" target="_blank">Pai Rico Pai Probre</a></li>
-                <li><a href="http://novatec.com.br/livros/pythonedjango/" target="_blank">Python e Django</a></li>
-                <li><a href="http://novatec.com.br/livros/mining/" target="_blank">Mineração de Dados da Web Social</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/The_Little_Prince" target="_blank">The little prince</a></li>
-                <li><a href="https://www.bibliaonline.com.br/" target="_blank">Holy Bible</a></li>
-                <li><a href="https://pt.wikipedia.org/wiki/1808_(livro)" target="_blank">1808</a></li>
+                {% for post in data.books.content %}
+                    <li><a href="{{post.url}}" target="_blank">{{post.label}}</a></li>
+                {% endfor %}
             </ol>
         </div>
 
-        <h4>Where to find me</h4>
+        <h4>{{data.where_to_find_me.title}}</h4>
         <div class="row">
             <ol>
-                {% for label, link in links %}
-                    <li><a href="{{link}}" target="_blank">{{label}}</a></li>
+                {% for post in data.where_to_find_me.content %}
+                    <li><a href="{{post.url}}" target="_blank">{{post.label}}</a></li>
                 {% endfor %}
             </ol>
         </div>

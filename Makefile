@@ -6,10 +6,12 @@ GITHUB_PAGES_BRANCH=master
 
 clean:
 	find . | grep -E "(__pycache__|\.pyc|\.pyo$$)" | xargs rm -rf
+content:
+	python gcontent.py
 freezer: tests
 	python run.py freezer
 tests: clean
-	nosetests test/ -v
+	py.test test/ -s
 setup:
 	pip install -U pip
 	pip install -r requirements.txt
