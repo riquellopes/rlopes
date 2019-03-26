@@ -63,6 +63,7 @@ class GContent(object):
 def get_content():
     return GContent.load_content()
 
+
 if __name__ == "__main__":
     gcontent = GContent()
     gcontent.salve()
